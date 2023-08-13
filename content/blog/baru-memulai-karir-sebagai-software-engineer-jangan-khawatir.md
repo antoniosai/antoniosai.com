@@ -49,9 +49,11 @@ Setelah teman-teman telah memahami penanda yang tersedia pada Roadmap bisa langs
 
 Berikut nya terdapat fitur yang sangat berguna yaitu "Update Status", tujuan nya untuk mencatat / tracking progress teman-teman belajar. Jika materi tersebut sudah teman-teman kuasai maka bisa Update Status nya menjadi Done (seperti gambar di atas).
 
-<img src="/images/blogs/roadmap-status.png"  style="width: 500px" >
+<img src="/images/blogs/roadmap-progress.png"  style="width: 700px" >
 
 Gambar diatas adalah contoh progress yang sedang saya pelajari. Keren bukan?
+
+<br>
 
 ## Penutup
 
