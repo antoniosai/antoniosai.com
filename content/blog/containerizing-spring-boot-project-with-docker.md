@@ -34,12 +34,16 @@ Setelah di device / host teman telah terinstall Docker dan juga Docker Compose, 
 
 ### Pembuatan Dockerfile
 
+{{< highlight md "linenos=table,hl_lines=8 15-17,linenostart=199" >}}
+
     FROM openjdk:17-jdk-alpine3.14
     ENV APP_HOME=/usr/app/
     WORKDIR $APP_HOME
     COPY target/*.jar app.jar
     EXPOSE 8001
     ENTRYPOINT ["java","-jar","app.jar"]
+
+{{< / highlight >}}
 
 Source Code diatas merupakan isi dari file **_Dockerfile. _**Image yang digunakan adalah openjdk:17-jdk-alpine3.14 yang tersedia di [\*\*\*hub.docker.com](http://hub.docker.com)\*\*\* ([https://hub.docker.com/layers/library/openjdk/17-ea-jdk-alpine3.14/images/sha256-a996cdcc040704ec6badaf5fecf1e144c096e00231a29188596c784bcf858d05](https://hub.docker.com/layers/library/openjdk/17-ea-jdk-alpine3.14/images/sha256-a996cdcc040704ec6badaf5fecf1e144c096e00231a29188596c784bcf858d05))
 

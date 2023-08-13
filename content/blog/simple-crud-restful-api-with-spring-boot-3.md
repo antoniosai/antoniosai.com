@@ -66,6 +66,7 @@ Perancangan Struktur Folder yang akan kita lakukan adalah seperti pada gambar. S
 
 Di dalam folder **_src/main/resources _**adalah direktori yang digunakan untuk menyimpan sebuah konfigurasi. Mari kita buat sebuah file bernama **_application.yml _**di dalam folder tersebut. Berikut isi dari
 
+    {{< highlight yaml >}}
     # src/main/resources/application.yml
 
     server:
@@ -98,10 +99,13 @@ Di dalam folder **_src/main/resources _**adalah direktori yang digunakan untuk m
         ansi:
           enabled: ALWAYS
 
+    {{< / highlight >}}
+
 ### #2 Pembuatan Entity
 
 Pertama kali yang kita lakukan pada tahap coding kali ini adalah Pembuatan Entity. Class Entity ini adalah sebuah Class yang merepresentasikan sebuah table dan column beserta tipe data nya pada Database.
 
+    {{< highlight java >}}
     package com.antoniosai.crud.modules.book;
 
 
@@ -141,6 +145,7 @@ Pertama kali yang kita lakukan pada tahap coding kali ini adalah Pembuatan Entit
         private Date updated_at;
 
     }
+    {{< / highlight >}}
 
 Penjelasan terhadap annotations yang digunakan di dalam class Entity
 
@@ -162,6 +167,7 @@ Penjelasan terhadap annotations yang digunakan di dalam class Entity
 
 Kabar baik dengan menggunakan JPA adalah kita tidak perlu repot membuat sebuah fungsi CRUD yang standar. Karena fungsi CRUD telah disediakan oleh nya. Jika hanya perlu meng ‘extends’ class JpaRepository agar bisa menggunakan nya. Berikut adalah contoh nya
 
+    {{< highlight java >}}
     package com.antoniosai.crud.modules.book;
 
     import org.springframework.data.jpa.repository.JpaRepository;
@@ -171,11 +177,13 @@ Kabar baik dengan menggunakan JPA adalah kita tidak perlu repot membuat sebuah f
     public interface BookRepository extends JpaRepository<BookEntity, Long> {
     }
 
+    {{< / highlight >}}
+
 ### #4 Pembuatan Service
 
 Di layer kali ini adalah merupakan sebuah Class yang akan memproses sebuah Data akan diolah sedemikian rupa tergantung kebutuhan dan juga class Service ini adalah yang akan diakses langsung oleh controller. Di class Service ini kita akan membuat sebuah method yang berkaitan dengan CRUD dasar seperti **_getBooks(), getBookById(Long id), updateBook(BookEntity book, Long id), saveBook(BookEntity book), destroyBook(Long id) _**DataBerikut source code service nya
-
-    package com.antoniosai.crud.modules.book;
+{{< highlight java >}}
+package com.antoniosai.crud.modules.book;
 
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.stereotype.Service;
@@ -216,12 +224,14 @@ Di layer kali ini adalah merupakan sebuah Class yang akan memproses sebuah Data 
             return "Successfully deleted a Book";
         }
     }
+    {{< / highlight >}}
 
 ### #5 Pembuatan Controller
 
 Akhir nya, kita telah sampai pada langkah terakhir. Yaitu pembuatan Controller. Pada langkah kita akan membuat sebuah endpoint yang akan diconsume menggunakan HTTP Client
 
-    package com.antoniosai.crud.modules.book;
+{{< highlight java >}}
+package com.antoniosai.crud.modules.book;
 
     import jakarta.validation.Valid;
     import org.springframework.beans.factory.annotation.Autowired;
@@ -278,6 +288,7 @@ Akhir nya, kita telah sampai pada langkah terakhir. Yaitu pembuatan Controller. 
             return new ResponseEntity<>(deleteMessage, HttpStatus.OK);
         }
     }
+    {{< / highlight >}}
 
 ### #6 Test menggunakan HTTP Client / Postman
 
