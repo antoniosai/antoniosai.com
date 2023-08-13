@@ -1,7 +1,7 @@
 [build]
 publish = "public"
 #command = "hugo --gc --minify"
-command = "hugo --gc --minify --baseURL https://frabjous-croquembouche-b74f89.netlify.app//"
+command = "hugo --gc --minify --baseURL https://antoniosai.netlify.app/"
 
 [context.production.environment]
 HUGO_VERSION = "0.115.4"
