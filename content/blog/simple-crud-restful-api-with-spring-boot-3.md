@@ -149,19 +149,19 @@ Pertama kali yang kita lakukan pada tahap coding kali ini adalah Pembuatan Entit
 
 Penjelasan terhadap annotations yang digunakan di dalam class Entity
 
-- **@Entity** merepresentasikan bahwa class tersebut adalah sebuah Entitas
+- **_@Entity_** merepresentasikan bahwa class tersebut adalah sebuah Entitas
 
-- **@Getter** & @**Setter **merupakan sebuah annotation untuk membuat sebuah class Getter & Setter pada sebuah non-static fields
+- **_@Getter_** & @**_Setter_** merupakan sebuah annotation untuk membuat sebuah class Getter & Setter pada sebuah non-static fields
 
-- **@NoArgsConstructor** sebuah annotation untuk membuat konstruktor kosongan
+- **_@NoArgsConstructor_** sebuah annotation untuk membuat konstruktor kosongan
 
-- **@AllArgsContructor** sebuah annotation yang akan membuat constructor dengan jumlah parameter nya sesuai dengan banyak nya field
+- **_@AllArgsContructor_** sebuah annotation yang akan membuat constructor dengan jumlah parameter nya sesuai dengan banyak nya field
 
-- **@Id** merupakan sebuah annotation yang merepresentasikan bahwa field id adalah sebuah Identifier
+- **_@Id_** merupakan sebuah annotation yang merepresentasikan bahwa field id adalah sebuah Identifier
 
-- **@CreationTimestamp **dengan menambahkan annotation ini. Hibernate akan mengisi value nya berdasarkan tanggal pembuatan saat itu ketika pembuatan sebuah row dalam table
+- **_@CreationTimestamp_** dengan menambahkan annotation ini. Hibernate akan mengisi value nya berdasarkan tanggal pembuatan saat itu ketika pembuatan sebuah row dalam table
 
-- **@UpdateTimestamp **sama hal nya seperti CreationTimestamp. UpdateTimestamp akan merubah value pada column ketika sebuah row nya mengalami perubahan
+- **_@UpdateTimestamp_** sama hal nya seperti CreationTimestamp. UpdateTimestamp akan merubah value pada column ketika sebuah row nya mengalami perubahan
 
 ### #3 Pembuatan Repository
 
@@ -308,8 +308,8 @@ Setelah semua langkah kita lakukan. Maka saat nya untuk mencoba aplikasi kita me
 
 Demikian artikel kali ini. Harapan saya adalah pembaca yang baru memulai belajar framework Java Spring Boot sedikit nya terbantu. Saya sadar masih banyak kekurangan yang baik disisi penulisan, penyampaian, tata bahasa maupun penerapan source seperti belum menggunakan validation, exception, DTO dan lain nya yang mudah-mudahan saya akan membahas di lain artikel.
 
-Source Code pada artikel ini teman-teman bisa mengakses nya di Repo [\*\*https://github.com/antoniosai/simple-crud-app-spring-boot](https://github.com/antoniosai/simple-crud-app-spring-boot)\*\*
+Source Code pada artikel ini teman-teman bisa mengakses nya di Repo **_[https://github.com/antoniosai/simple-crud-app-spring-boot](https://github.com/antoniosai/simple-crud-app-spring-boot)_**
 
-Terdapat lanjutan nya yang akan membahas Containerizing Projek dengan Spring Boot, teman-teman bisa mengakses nya disini : [\*\*https://medium.com/@antoniosae/containerizing-projek-spring-boot-dengan-docker-100ed7482ebe](https://medium.com/@antoniosae/containerizing-projek-spring-boot-dengan-docker-100ed7482ebe)\*\*
+Terdapat lanjutan nya yang akan membahas Containerizing Projek dengan Spring Boot, teman-teman bisa mengakses nya disini : **_[Go to Article](/blog/containerizing-spring-boot-project-with-docker/)_**
 
 Sekian, saya ucapkan terimakasih dan semangat belajr!
