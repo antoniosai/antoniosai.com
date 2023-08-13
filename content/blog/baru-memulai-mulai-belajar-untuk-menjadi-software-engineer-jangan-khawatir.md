@@ -1,6 +1,6 @@
 +++
 author = "Antonio Saiful Islam"
-title = "Baru Memulai Karir Sebagai Software Engineer? Jangan Khawatir!"
+title = "Baru Memulai Belajar Untuk Menjadi Software Engineer? Jangan Khawatir!"
 date = "2023-08-13"
 description = "Pada blog kali ini kita akan membahas tentang situs Roadmap.sh yang dimana mengarahkan Anda menjadi Software Engineer Handal!"
 tags = ["software developer", "pemula", "fullstack", "backend", "frontend"]
@@ -9,7 +9,7 @@ image = "/images/blogs/web-roadmap.png"
 
 ## Sedikit Cerita Penulis
 
-Pada tahun 2011 ketika saya baru memulai belajar Bahasa Pemrograman memang pada saat itu sudah banyak buku tersedia, sumber daya di internet pun banyak jika iya pun pada saat itu saya bukan dari kalangan keluarga sultan dan masih pelajar / belum berpenghasilan yang berarti jika saya ingin mencari referensi atau membeli buku harus merogoh kocek uang yang lumayan. Akan tetapi (entah sebuah asalan atau pembelaan) setelah kita mempelajari dalam satu buku atau artikel di Internet. Terdepat sebuah kebingungan saya pribadi, yaitu
+Pada tahun 2011 ketika saya baru memulai belajar Bahasa Pemrograman memang pada saat itu sudah banyak buku tersedia, sumber daya di internet pun banyak jika iya pun pada saat itu saya bukan dari kalangan keluarga sultan dan masih pelajar / belum berpenghasilan yang berarti jika saya ingin mencari referensi atau membeli buku harus merogoh kocek uang yang lumayan. Akan tetapi (entah sebuah asalan atau pembelaan) setelah saya mempelajari dalam satu buku atau artikel di Internet. Terdepat sebuah kebingungan saya pribadi, yaitu
 
 > **_"Apa yang harus kita pelajari selanjutnya? Apakah saya sedang berada di jalan yang benar?"_**
 
