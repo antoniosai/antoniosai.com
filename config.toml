@@ -1,13 +1,50 @@
-baseURL = "https://example.com/"
-title = "Compose Docs"
-enableRobotsTXT = true
-# this example loads the theme as hugo module
-# comment out line below, and uncomment the line after it if you prefer to load the theme normally
-theme = ["github.com/onweru/compose"] # edit this if you'ld rather use a fork of this repo
-# theme = "compose"
-enableGitInfo = true
+baseURL = "https://antoniosai.netlify.com/"
+languageCode = "en-us"
+title = "AntonoiSai's Blog"
+theme = "github-style"
+googleAnalytics = "UA-123456-789"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
-# disableKinds = ["taxonomy", "taxonomyTerm"]
+[params]
+  author = "Antonio Saiful Islam"
+  description = "In solitude, where we are least alone."
+  github = "antoniosai"
+  # facebook = "antoniosai"
+  # twitter = "antoniosai"
+  linkedin = "antoniosai"
+  # instagram = "antoniosai"
+  # tumblr = "antoniosai"
+  email = "finallyantonio@gmail.com"
+  # url = "https://antonio.netlify.com"
+  keywords = "blog, google analytics"
+  rss = true
+  lastmod = true
+  # userStatusEmoji = "😀"
+  favicon = "/images/github.png"
+  location = "Indonesia"
+  # enableGitalk = false
 
-[outputs]
-  home = ["HTML", "RSS","JSON"]
+  [params.gitalk]
+    clientID = "Your client ID" 
+    clientSecret = "Your client secret" 
+    repo = "repo"
+    owner = "antoniosai"
+    admin = "antoniosai"
+    id = "location.pathname"
+    labels = "gitalk"
+    perPage = 15
+    pagerDirection = "last"
+    createIssueManually = true
+    distractionFreeMode = false
+
+  [[params.links]]
+    title = "Link"
+    href = "https://github.com/antoniosai"
+  [[params.links]]
+    title = "Link2"
+    href = "https://antoniosai.com"
+    icon = "https://avatars.githubusercontent.com/u/8235099?s=400&u=4afbacb1f619b28541a07b8597b3f478a26fc253&v=4"
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
