@@ -3,7 +3,7 @@ author = "Antonio Saiful Islam"
 title = "Config Service pada Spring Boot"
 date = "2023-11-19"
 description = "Konfigurasi Spring Boot Config Server dan Penggunaannya"
-tags = ["software developer", "software development", "spring boot", "coding", "microservice", "java", "configuration managemenet"]
+tags = ["software developer", "spring boot", "coding", "microservice", "java"]
 image = "https://cdn-images-1.medium.com/max/2000/1*zO-9qAkaL1IzvpLb448zKA.jpeg"
 +++
 
