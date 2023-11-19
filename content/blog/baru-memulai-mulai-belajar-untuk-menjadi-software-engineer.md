@@ -1,6 +1,6 @@
 +++
 author = "Antonio Saiful Islam"
-title = "Baru Memulai Belajar Untuk Menjadi Software Engineer? Jangan Khawatir!"
+title = "Baru Memulai Belajar Untuk Menjadi Software Engineer?"
 date = "2023-08-13"
 description = "Pada blog kali ini kita akan membahas tentang situs Roadmap.sh yang dimana mengarahkan Anda menjadi Software Engineer Handal!"
 tags = ["software developer", "pemula", "fullstack", "backend", "frontend"]
