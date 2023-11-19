@@ -35,14 +35,12 @@ Setelah di device / host teman telah terinstall Docker dan juga Docker Compose, 
 ### Pembuatan Dockerfile
 
 {{< highlight md "linenos=table,hl_lines=8 15-17,linenostart=199" >}}
-
-    FROM openjdk:17-jdk-alpine3.14
-    ENV APP_HOME=/usr/app/
-    WORKDIR $APP_HOME
-    COPY target/*.jar app.jar
-    EXPOSE 8001
-    ENTRYPOINT ["java","-jar","app.jar"]
-
+FROM openjdk:17-jdk-alpine3.14
+ENV APP_HOME=/usr/app/
+WORKDIR $APP_HOME
+COPY target/*.jar app.jar
+EXPOSE 8001
+ENTRYPOINT ["java","-jar","app.jar"]
 {{< / highlight >}}
 
 Source Code diatas merupakan isi dari file **_Dockerfile. _**Image yang digunakan adalah openjdk:17-jdk-alpine3.14 yang tersedia di [\*\*\*hub.docker.com](http://hub.docker.com)\*\*\* ([https://hub.docker.com/layers/library/openjdk/17-ea-jdk-alpine3.14/images/sha256-a996cdcc040704ec6badaf5fecf1e144c096e00231a29188596c784bcf858d05](https://hub.docker.com/layers/library/openjdk/17-ea-jdk-alpine3.14/images/sha256-a996cdcc040704ec6badaf5fecf1e144c096e00231a29188596c784bcf858d05))
@@ -52,45 +50,47 @@ Saya sengaja memilih JDK versi 17 karena menggunakan versi LTS yang terbaru dari
 Dan juga perhatikan di potongan **EXPOSE 8001 **maksud nya adalah Docker akan melisten port 8001
 
 ### Pembuatan file docker-compose.yaml
-
-    version: "3.8"
-    services:
-      simplecrudapp:
-        image: antoniosai/simple-crud-app:1.0.0
-        build: .
-        ports:
-          - "8001:8001"
-        restart: always
-        depends_on:
-          - dbapp
-        networks:
-          - simpleappnetwork
-        environment:
-          spring.datasource.url: jdbc:postgresql://dbapp:5432/postgres
-          spring.datasource.username: admin
-          spring.datasource.password: admin
-          spring.jpa.hibernate.ddl.auto: create
-      dbapp:
-        image: postgres:15.1
-        restart: always
-        ports:
-          - "5433:5432"
-        environment:
-          - POSTGRES_PASSWORD=admin
-          - POSTGRES_USER=admin
-          - POSTGRES_DB=postgres
-        networks:
-          - simpleappnetwork
+{{< highlight yaml >}}
+version: "3.8"
+services:
+  simplecrudapp:
+    image: antoniosai/simple-crud-app:1.0.0
+    build: .
+    ports:
+      - "8001:8001"
+    restart: always
+    depends_on:
+      - dbapp
     networks:
-      simpleappnetwork:
+      - simpleappnetwork
+    environment:
+      spring.datasource.url: jdbc:postgresql://dbapp:5432/postgres
+      spring.datasource.username: admin
+      spring.datasource.password: admin
+      spring.jpa.hibernate.ddl.auto: create
+  dbapp:
+    image: postgres:15.1
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=postgres
+    networks:
+      - simpleappnetwork
+networks:
+  simpleappnetwork:
+
+{{</highlight>}}
 
 Diatas merukapan isi dari file **_docker-compose.yaml _**yang akan membuat dua buah container yaitu : **_simplecrudapp_** dan **_dbapp _**dengan masing-masing konfigurasi nya
 
 ### Pembuatan file run.sh
 
-    mvn clean install &&
-    docker build -f Dockerfile -t antoniosai/simple-crud-app:1.0.0 . &&
-    docker-compose up -d
+{{< highlight bash >}}
+mvn clean install && docker build -f Dockerfile -t antoniosai/simple-crud-app:1.0.0 . && docker-compose up -d
+{{</ highlight >}}
 
 Langkah terakhir adalah pembuatan file **_run.sh _**shell script ini adalah optional. Saya hanya saja berinisiatif supaya tidak cape untuk ngetik untuk menjalankan perintah yang sama secara berulang. Isi nya merupakan :
 

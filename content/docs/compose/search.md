@@ -17,9 +17,9 @@ Compose implements [Fuse js](https://fusejs.io/) or [Algolia](https://www.algoli
 # search
 [search]
 on = true
-global = false
+global = true
 [search.algolia]
-enable = false # if false search will default to fusejs
+enable = true # if false search will default to fusejs
 id = "Q40WQQX84U" # Application ID
 index = "compose" # Index name
 key = "da87401a458102ec6bbd6cc5e5cf8d95" # Search-Only API Key
@@ -35,7 +35,7 @@ By default, search will return results from the current content section. Searche
 ...
 [search]
 ...
-global = false # turn to `true` to enable global search
+global = true # turn to `true` to enable global search
 ...
 ```
 
